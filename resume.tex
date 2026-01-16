@@ -42,10 +42,10 @@
       \small\textbf{#1} & \small #2 \\
     \end{tabular*}\vspace{-5pt}
 }
-
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in, itemsep=4pt]} % Indented sub-items and spacing
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -73,9 +73,18 @@
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {KwangWoon University}{Expected Graduation Date: Feb 2026}
-      {Bachelor of major Robotics}{GPA: 4.13/4.5 (Major GPA: 4.17/4.5)}
+    \item
+    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{KwangWoon University} & \small Expected Graduation Date: Feb 2026 \\
+    \end{tabular*}
+    \vspace{-5pt}
+    \begin{itemize}[leftmargin=0in, label={}]
+        \small{
+            \item \textbf{GPA: 4.13/4.5}
+            \item \textbf{Major GPA: 4.17/4.5}
+            \item \textit{Bachelor of major Robotics}
+        }
+    \end{itemize}
   \resumeSubHeadingListEnd
 
 
@@ -115,10 +124,9 @@
   \resumeSubHeadingListStart
 
     \resumeProjectHeading
-      {Line Tracking (NVIDIA PilotNet) + Traffic Sign Detection (YOLO)}{Oct 2025 -- Nov 2025}
+      {Line Tracking (NVIDIA PilotNet) + Traffic Sign Detection (YOLO) – Raspberry Pi Autonomous Driving}{Oct 2025 -- Nov 2025}
       \resumeItemListStart
-        \normalsize{\textbf{[Team Leader] -- Raspberry Pi Autonomous Driving}}
-        \resumeItem{Built a real-time autonomous driving system on Raspberry Pi 5 using multi-threaded lane tracking and YOLO-based traffic-sign detection.}
+        \resumeItem{\textbf{[Team Leader]} Built a real-time autonomous driving system on Raspberry Pi 5 using multi-threaded lane tracking and YOLO-based traffic-sign detection.}
         \resumeItem{Applied dual PilotNet lane models (Left/Right) and switched models dynamically based on sign recognition results for reliable maneuvering.}
         \resumeItem{Enhanced on-device performance through ROI-based preprocessing and hardware-aware model optimization.}
       \resumeItemListEnd
@@ -220,9 +228,11 @@
 \vspace{10pt}
 \section{Research Interest}
  \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Autonomous driving, Reinforcement Learning, SLAM}
-    }}
+    \small{
+     \item \textbf{Autonomous driving}
+     \item \textbf{Reinforcement Learning}
+     \item \textbf{SLAM}
+    }
  \end{itemize}
 
 
