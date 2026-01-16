@@ -3,15 +3,14 @@
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{graphicx}
 \usepackage{fontspec}
 \setmainfont{NanumGothic}
-
-
 \usepackage[usenames,dvipsnames]{xcolor}
 
 % Formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-8pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 \newcommand{\resumeItem}[1]{
@@ -20,25 +19,26 @@
   }
 }
 
+% Ensure consistent width for all headings tables
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubheadingSingle}[2]{
   \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
     \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small\textbf{#1} & #2 \\
+    \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+      \small\textbf{#1} & \small #2 \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -52,13 +52,22 @@
 \begin{document}
 
 %----------HEADER----------
-\begin{center}
-    \textbf{\Huge \scshape Soonhyuk Kang} \\ \vspace{3pt}
-    9-7, Gwangun-ro 2ga-gil, Nowon-gu, Seoul, 01899 \\
-    \href{mailto:tnsgurrkd@naver.com}{\underline{tnsgurrkd@naver.com}} $|$ 
-    (+82) 10-3997-9425
-\end{center}
+% Profile picture and contact info
+\noindent
+\begin{minipage}[c]{0.18\textwidth}
+    \includegraphics[width=\linewidth]{profile.png}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.78\textwidth}
+    \begin{center}
+        \textbf{\Huge \scshape Soonhyuk Kang} \\ \vspace{5pt}
+        9-7, Gwangun-ro 2ga-gil, Nowon-gu, Seoul, 01899 \\
+        \href{mailto:tnsgurrkd@naver.com}{\underline{tnsgurrkd@naver.com}} $|$ 
+        (+82) 10-3997-9425
+    \end{center}
+\end{minipage}
 
+\vspace{10pt}
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -103,9 +112,9 @@
   \resumeSubHeadingListStart
 
     \resumeProjectHeading
-      {Line Tracking (NVIDIA PilotNet) + Traffic Sign Detection (YOLO) -- Raspberry Pi Autonomous Driving}{Oct 2025 -- Nov 2025}
+      {Line Tracking (NVIDIA PilotNet) + Traffic Sign Detection (YOLO)}{Oct 2025 -- Nov 2025}
       \resumeItemListStart
-        \small{\textbf{[Team Leader]}}
+        \small{\textbf{[Team Leader] -- Raspberry Pi Autonomous Driving}}
         \resumeItem{Built a real-time autonomous driving system on Raspberry Pi 5 using multi-threaded lane tracking and YOLO-based traffic-sign detection.}
         \resumeItem{Applied dual PilotNet lane models (Left/Right) and switched models dynamically based on sign recognition results for reliable maneuvering.}
         \resumeItem{Enhanced on-device performance through ROI-based preprocessing and hardware-aware model optimization.}
@@ -153,7 +162,7 @@
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {Robot Arm Control System: Implementation of Kinematics, Simulation, and Control Algorithms}{Oct 2024 -- Dec 2024}
+      {Robot Arm Control System: Implementation of Kinematics, Simulation, and Control}{Oct 2024 -- Dec 2024}
       \resumeItemListStart
         \resumeItem{Developed a simulation UI for robot arm kinematics using ODE.}
         \resumeItem{Implemented motor control algorithms and real-time communication with ODE.}
