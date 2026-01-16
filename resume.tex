@@ -1,0 +1,226 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\setmainfont{NanumGothic}
+
+
+\usepackage[usenames,dvipsnames]{xcolor}
+
+% Formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingSingle}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small\textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+    \textbf{\Huge \scshape Soonhyuk Kang} \\ \vspace{3pt}
+    9-7, Gwangun-ro 2ga-gil, Nowon-gu, Seoul, 01899 \\
+    \href{mailto:tnsgurrkd@naver.com}{\underline{tnsgurrkd@naver.com}} $|$ 
+    (+82) 10-3997-9425
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {KwangWoon University}{Expected Graduation Date: Feb 2026}
+      {Bachelor of major Robotics}{GPA: 4.13/4.5 (Major GPA: 4.17/4.5)}
+  \resumeSubHeadingListEnd
+
+
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Hazardous and Extreme Environment Robotics Lab @HERO}{Jun 2025 -- Aug 2025}
+      {Intern}{}
+      \resumeItemListStart
+        \resumeItem{Imported a SLAM baseline into the lab’s underwater simulation environment}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Robotics \& A.I. Lab @RAIL}{July 2024 -- Jun 2025}
+      {Student Intern}{}
+      \resumeItemListStart
+        \resumeItem{Research on SLAM}
+        \resumeItem{Participated in the VLM-based project}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Magnetic Robotics Lab @MRL}{Jan 2024 -- July 2025}
+      {Student Intern}{}
+      \resumeItemListStart
+        \resumeItem{Research on Magnetic Robot}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {Line Tracking (NVIDIA PilotNet) + Traffic Sign Detection (YOLO) -- Raspberry Pi Autonomous Driving}{Oct 2025 -- Nov 2025}
+      \resumeItemListStart
+        \small{\textbf{[Team Leader]}}
+        \resumeItem{Built a real-time autonomous driving system on Raspberry Pi 5 using multi-threaded lane tracking and YOLO-based traffic-sign detection.}
+        \resumeItem{Applied dual PilotNet lane models (Left/Right) and switched models dynamically based on sign recognition results for reliable maneuvering.}
+        \resumeItem{Enhanced on-device performance through ROI-based preprocessing and hardware-aware model optimization.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {Underwater SLAM Baseline Import}{Jun 2025 -- Aug 2025}
+      \resumeItemListStart
+        \resumeItem{Imported a SLAM baseline into the lab’s underwater simulation environment.}
+        \resumeItem{Extracted datasets from simulation for evaluation.}
+        \resumeItem{Set up the imported baseline as a reference for comparison with the lab’s SLAM system.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {Autonomous Mobile Robot for Target Search Based on LLM}{Jan 2025 -- Aug 2025}
+      \resumeItemListStart
+        \small{\textbf{[Team Leader]}}
+        \resumeItem{Developed an indoor autonomous robot that integrates LLM and SLAM to search for missing targets based on natural language descriptions.}
+        \resumeItem{Applied a modified Bayesian approach to infer location probabilities from human traits interpreted by the LLM.}
+        \resumeItem{Generated search priorities and executed autonomous navigation using Cartographer-based SLAM and ROS2 communication.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {Home Sign Language Assistant Robot Using Turtlebot}{Apr 2025 -- Jun 2025}
+      \resumeItemListStart
+        \resumeItem{Developed a home assistant robot that recognizes sign language commands and performs actions}
+        \resumeItem{Built indoor 2D SLAM maps using Cartographer and tuned parameters for stable navigation.}
+        \resumeItem{Linked sign command interpretation with navigation and object grasping using ROS2.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {Cross-View Place Recognition Using Vision-Language Models}{Jul 2024 -- Oct 2024}
+      \resumeItemListStart
+        \resumeItem{Performed cross-view image matching for visual place recognition (VPR) using CLIP and ViT-based VLM.}
+        \resumeItem{Generated image-text embeddings via semantic captioning and Transformer-based feature extraction.}
+        \resumeItem{Enhanced top-1 recall accuracy by aligning features across viewpoints through language-guided cues.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {Object Detection Using RealSense and Data Communication with Kiosk System}{Aug 2024 -- Dec 2024}
+      \resumeItemListStart
+        \resumeItem{Designed a real-time kiosk system integrating RealSense cameras and socket communication.}
+        \resumeItem{Trained object detection models using YOLO and applied them for fruit classification.}
+        \resumeItem{Implemented data validation and optimized system accuracy using Python.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {Robot Arm Control System: Implementation of Kinematics, Simulation, and Control Algorithms}{Oct 2024 -- Dec 2024}
+      \resumeItemListStart
+        \resumeItem{Developed a simulation UI for robot arm kinematics using ODE.}
+        \resumeItem{Implemented motor control algorithms and real-time communication with ODE.}
+        \resumeItem{Verified simulation accuracy through real-time joint angle control.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {A mobile robot equipped with multiple sensors}{Mar 2024 -- Jun 2024}
+      \resumeItemListStart
+        \small{\textbf{[Team Leader]}}
+        \resumeItem{Conducted the project using the C language.}
+        \resumeItem{Developed a mobile robot with Atmega 128 as the main controller and equipped it with six sensors for operation}
+        \resumeItem{Each sensor operated using the PWM method.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {Line Tracer}{Sep 2023 -- Dec 2023}
+      \resumeItemListStart
+        \resumeItem{Conducted the project using Matlab.}
+        \resumeItem{Used an LED to detect black lines and navigation.}
+        \resumeItem{Processed the detected data through normalization to minimize oscillation.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PUBLICATION-----------
+\section{Publication}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \item Soonhyuk Kang, Minjae Wi, Chulho Jin, Seonguk Kim, and Junghyun Oh, "LLM 기반 특정 대상 탐색을 위한 자율주행 모바일 로봇," in \textit{Proceedings of the Institute of Control, Robotics and Systems (ICROS) Annual Conference}, June 2025, pp. 1028--1029.
+    \item I Made Putra Arya Winata, Jinhoon Wang, Soonhyuk Kang, and Junghyun Oh, "장소 인식을 위한 시각 언어 모델 추출 기반 교차 시점 접근법," in \textit{Proceedings of the Korea Robotics Society Annual Conference (KROC)}, February 2025, pp. 422--423.
+  \end{itemize}
+
+
+%-----------AWARDS-----------
+\section{Awards}
+  \resumeSubHeadingListStart
+    \resumeSubheadingSingle
+      {Poster -- First Prize, Match-Up Advanced Program Competition, Kwangwoon University}{Dec 2025}
+    \resumeSubheadingSingle
+      {Report -- Second Prize, Match-Up Advanced Program Competition, Kwangwoon University}{Dec 2025}
+    \resumeSubheadingSingle
+      {Participation prize, ICT Hanium DreamUp}{Nov 2025}
+    \resumeSubheadingSingle
+      {Dean’s List (Academic Excellence), Kwangwoon University}{Apr 2025}
+  \resumeSubHeadingListEnd
+
+
+%-----------RESEARCH INTEREST-----------
+\section{Research Interest}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Visual SLAM, LiDAR SLAM} \\
+     \textbf{Computer Vision} \\
+     \textbf{Artificial Intelligence}
+    }}
+ \end{itemize}
+
+
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming}{: C++ / C, Python} \\
+     \textbf{Language}{: Korean, English}
+    }}
+ \end{itemize}
+
+
+\end{document}
