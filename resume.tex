@@ -5,12 +5,13 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{fontspec}
-\setmainfont{NanumGothic}
+\setmainfont{FreeSerif}
+\newfontfamily\hangulfont{Noto Serif CJK KR}
 \usepackage[usenames,dvipsnames]{xcolor}
 
 % Formatting
 \titleformat{\section}{
-  \vspace{-2pt}\scshape\raggedright\large % Adjusted vspace
+  \vspace{-2pt}\bfseries\raggedright\large % Changed to bold
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 \newcommand{\resumeItem}[1]{
@@ -44,7 +45,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -116,7 +117,7 @@
     \resumeProjectHeading
       {Line Tracking (NVIDIA PilotNet) + Traffic Sign Detection (YOLO)}{Oct 2025 -- Nov 2025}
       \resumeItemListStart
-        \small{\textbf{[Team Leader] -- Raspberry Pi Autonomous Driving}}
+        \normalsize{\textbf{[Team Leader] -- Raspberry Pi Autonomous Driving}}
         \resumeItem{Built a real-time autonomous driving system on Raspberry Pi 5 using multi-threaded lane tracking and YOLO-based traffic-sign detection.}
         \resumeItem{Applied dual PilotNet lane models (Left/Right) and switched models dynamically based on sign recognition results for reliable maneuvering.}
         \resumeItem{Enhanced on-device performance through ROI-based preprocessing and hardware-aware model optimization.}
@@ -133,7 +134,7 @@
     \resumeProjectHeading
       {Autonomous Mobile Robot for Target Search Based on LLM}{Jan 2025 -- Aug 2025}
       \resumeItemListStart
-        \small{\textbf{[Team Leader]}}
+        \normalsize{\textbf{[Team Leader]}}
         \resumeItem{Developed an indoor autonomous robot that integrates LLM and SLAM to search for missing targets based on natural language descriptions.}
         \resumeItem{Applied a modified Bayesian approach to infer location probabilities from human traits interpreted by the LLM.}
         \resumeItem{Generated search priorities and executed autonomous navigation using Cartographer-based SLAM and ROS2 communication.}
@@ -174,7 +175,7 @@
     \resumeProjectHeading
       {A mobile robot equipped with multiple sensors}{Mar 2024 -- Jun 2024}
       \resumeItemListStart
-        \small{\textbf{[Team Leader]}}
+        \normalsize{\textbf{[Team Leader]}}
         \resumeItem{Conducted the project using the C language.}
         \resumeItem{Developed a mobile robot with Atmega 128 as the main controller and equipped it with six sensors for operation}
         \resumeItem{Each sensor operated using the PWM method.}
@@ -195,8 +196,8 @@
 \vspace{10pt}
 \section{Publication}
   \begin{itemize}[leftmargin=0.15in, label={}]
-    \item Soonhyuk Kang, Minjae Wi, Chulho Jin, Seonguk Kim, and Junghyun Oh, "LLM 기반 특정 대상 탐색을 위한 자율주행 모바일 로봇," in \textit{Proceedings of the Institute of Control, Robotics and Systems (ICROS) Annual Conference}, June 2025, pp. 1028--1029.
-    \item I Made Putra Arya Winata, Jinhoon Wang, Soonhyuk Kang, and Junghyun Oh, "장소 인식을 위한 시각 언어 모델 추출 기반 교차 시점 접근법," in \textit{Proceedings of the Korea Robotics Society Annual Conference (KROC)}, February 2025, pp. 422--423.
+    \item Soonhyuk Kang, Minjae Wi, Chulho Jin, Seonguk Kim, and Junghyun Oh, "{\hangulfont LLM 기반 특정 대상 탐색을 위한 자율주행 모바일 로봇}," in \textit{Proceedings of the Institute of Control, Robotics and Systems (ICROS) Annual Conference}, June 2025, pp. 1028--1029.
+    \item I Made Putra Arya Winata, Jinhoon Wang, Soonhyuk Kang, and Junghyun Oh, "{\hangulfont 장소 인식을 위한 시각 언어 모델 추출 기반 교차 시점 접근법}," in \textit{Proceedings of the Korea Robotics Society Annual Conference (KROC)}, February 2025, pp. 422--423.
   \end{itemize}
 
 
@@ -220,9 +221,7 @@
 \section{Research Interest}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Visual SLAM, LiDAR SLAM} \\
-     \textbf{Computer Vision} \\
-     \textbf{Artificial Intelligence}
+     \textbf{Autonomous driving, Reinforcement Learning, SLAM}
     }}
  \end{itemize}
 
