@@ -23,7 +23,7 @@
 % Ensure consistent width for all headings tables
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
-    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\linewidth}[t]{p{0.75\textwidth}@{\extracolsep{\fill}}r}
       \textbf{#1} & \small #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
@@ -31,14 +31,14 @@
 
 \newcommand{\resumeSubheadingSingle}[2]{
   \vspace{-1pt}\item
-    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\linewidth}[t]{p{0.75\textwidth}@{\extracolsep{\fill}}r}
       \textbf{#1} & \small #2 \\
     \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\linewidth}[t]{p{0.75\textwidth}@{\extracolsep{\fill}}r}
       \small\textbf{#1} & \small #2 \\
     \end{tabular*}\vspace{-5pt}
 }
@@ -126,7 +126,7 @@
   \resumeSubHeadingListStart
 
     \resumeProjectHeading
-      {Line Tracking (NVIDIA PilotNet) + Traffic Sign Detection (YOLO) – Raspberry Pi Autonomous Driving}{Oct 2025 -- Nov 2025}
+      {Deep Learning-based Lane Tracking and Traffic Sign Recognition System – Raspberry Pi Autonomous Driving}{Oct 2025 -- Nov 2025}
       \resumeItemListStart
         \normalsize{\textbf{[Team Leader]}}
         \resumeItem{Built a real-time autonomous driving system on Raspberry Pi 5 using multi-threaded lane tracking and YOLO-based traffic-sign detection.}
@@ -168,7 +168,7 @@
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {Object Detection Using RealSense and Data Communication with Kiosk System}{Aug 2024 -- Dec 2024}
+      {User-Customized Plating using Vision Technology}{Aug 2024 -- Dec 2024}
       \resumeItemListStart
         \resumeItem{Designed a real-time kiosk system integrating RealSense cameras and socket communication.}
         \resumeItem{Trained object detection models using YOLO and applied them for fruit classification.}
@@ -218,6 +218,8 @@
 \vspace{10pt}
 \section{Awards}
   \begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt] % Tight spacing
+     \resumeSubheadingSingle
+      {Excellence Prize, 2024 Intelligent Robot WE-Meet Project Integrated Competition}{Dec 2024}
      \resumeSubheadingSingle
       {Poster -- First Prize, Match-Up Advanced Program Competition, Kwangwoon University}{Dec 2025}
      \resumeSubheadingSingle
