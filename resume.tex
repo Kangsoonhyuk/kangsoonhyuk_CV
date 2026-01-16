@@ -42,10 +42,10 @@
       \small\textbf{#1} & \small #2 \\
     \end{tabular*}\vspace{-5pt}
 }
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in, itemsep=4pt]} % Indented sub-items and spacing
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.3in, itemsep=4pt]} % Increased indentation
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -80,8 +80,8 @@
     \vspace{-5pt}
     \begin{itemize}[leftmargin=0in, label={}]
         \small{
-            \item \textbf{GPA: 4.13/4.5}
-            \item \textbf{Major GPA: 4.17/4.5}
+            \item \textbf{GPA: 4.16/4.5}
+            \item \textbf{Major GPA: 4.21/4.5}
             \item \textit{Bachelor of major Robotics}
         }
     \end{itemize}
@@ -99,6 +99,8 @@
       \resumeItemListStart
         \resumeItem{Imported a SLAM baseline into the lab’s underwater simulation environment}
       \resumeItemListEnd
+
+    \vspace{5pt} % Spacing between HERO and RAIL
 
     \resumeSubheading
       {Robotics \& A.I. Lab @RAIL}{July 2024 -- Jun 2025}
@@ -126,7 +128,8 @@
     \resumeProjectHeading
       {Line Tracking (NVIDIA PilotNet) + Traffic Sign Detection (YOLO) – Raspberry Pi Autonomous Driving}{Oct 2025 -- Nov 2025}
       \resumeItemListStart
-        \resumeItem{\textbf{[Team Leader]} Built a real-time autonomous driving system on Raspberry Pi 5 using multi-threaded lane tracking and YOLO-based traffic-sign detection.}
+        \normalsize{\textbf{[Team Leader]}}
+        \resumeItem{Built a real-time autonomous driving system on Raspberry Pi 5 using multi-threaded lane tracking and YOLO-based traffic-sign detection.}
         \resumeItem{Applied dual PilotNet lane models (Left/Right) and switched models dynamically based on sign recognition results for reliable maneuvering.}
         \resumeItem{Enhanced on-device performance through ROI-based preprocessing and hardware-aware model optimization.}
       \resumeItemListEnd
@@ -202,32 +205,34 @@
 
 %-----------PUBLICATION-----------
 \vspace{10pt}
+%-----------PUBLICATION-----------
+\vspace{10pt}
 \section{Publication}
-  \begin{itemize}[leftmargin=0.15in, label={}]
-    \item Soonhyuk Kang, Minjae Wi, Chulho Jin, Seonguk Kim, and Junghyun Oh, "{\hangulfont LLM 기반 특정 대상 탐색을 위한 자율주행 모바일 로봇}," in \textit{Proceedings of the Institute of Control, Robotics and Systems (ICROS) Annual Conference}, June 2025, pp. 1028--1029.
-    \item I Made Putra Arya Winata, Jinhoon Wang, Soonhyuk Kang, and Junghyun Oh, "{\hangulfont 장소 인식을 위한 시각 언어 모델 추출 기반 교차 시점 접근법}," in \textit{Proceedings of the Korea Robotics Society Annual Conference (KROC)}, February 2025, pp. 422--423.
+  \begin{itemize}[leftmargin=0in, label={}] % Removed indentation
+    \item {\hangulfont 강순혁, 김선국, 위민재, 진철호, 오정현, "베이지안 추론과 비전 인지를 결합한 LLM 기반 자율 탐색 모바일 로봇," 한국로봇종합학술대회(KROC), 2026년 2월}
+    \item {\hangulfont I Made Putra Arya Winata, 왕진훈, 강순혁, 오정현, "장소 인식을 위한 시각 언어 모델 추출 기반 교차 시점 접근법," 한국로봇종합학술대회(KROC), 2025년 2월}
   \end{itemize}
 
 
 %-----------AWARDS-----------
 \vspace{10pt}
 \section{Awards}
-  \resumeSubHeadingListStart
-    \resumeSubheadingSingle
+  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt] % Tight spacing
+     \resumeSubheadingSingle
       {Poster -- First Prize, Match-Up Advanced Program Competition, Kwangwoon University}{Dec 2025}
-    \resumeSubheadingSingle
+     \resumeSubheadingSingle
       {Report -- Second Prize, Match-Up Advanced Program Competition, Kwangwoon University}{Dec 2025}
-    \resumeSubheadingSingle
+     \resumeSubheadingSingle
       {Participation prize, ICT Hanium DreamUp}{Nov 2025}
-    \resumeSubheadingSingle
+     \resumeSubheadingSingle
       {Dean’s List (Academic Excellence), Kwangwoon University}{Apr 2025}
-  \resumeSubHeadingListEnd
+  \end{itemize}
 
 
 %-----------RESEARCH INTEREST-----------
 \vspace{10pt}
 \section{Research Interest}
- \begin{itemize}[leftmargin=0.15in, label={}]
+ \begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt] % Tight spacing
     \small{
      \item \textbf{Autonomous driving}
      \item \textbf{Reinforcement Learning}
