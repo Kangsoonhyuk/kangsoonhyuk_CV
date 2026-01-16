@@ -1,7 +1,7 @@
-all: resume.pdf
+all: kangsoonhyuk_CV.pdf
 
-resume.pdf: resume.tex
-	xelatex -interaction=nonstopmode resume.tex
+kangsoonhyuk_CV.pdf: resume.tex
+	xelatex -interaction=nonstopmode -jobname=kangsoonhyuk_CV resume.tex
 
 clean:
 	rm -f *.aux *.log *.out *.toc *.pdf
